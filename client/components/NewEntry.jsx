@@ -27,8 +27,8 @@ class newEntry extends React.Component {
         console.log(this.state)
     }
     saveEntry(e) {
-        console.log('one day i\'ll do something')
-        //this.state.reflection = input text
+        this.state.reflection = document.getElementById('journal').value
+        console.log(this.state)
         //set this data to something, send it to database
         //go back to homepage/ to view entries
     }
@@ -57,7 +57,7 @@ render () {
             return <button key={factor} onClick={this.setFactor}>{factor}</button>
             })}
         <h2>Detail your experience</h2>
-        <input style={style} type='text'/> <br/> <br/>
+        <input style={style} type='text' id='journal'/> <br/> <br/>
         <button onClick={this.saveEntry}>submit</button>
     </div>
 )  
