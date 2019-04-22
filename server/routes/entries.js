@@ -13,12 +13,11 @@ router.get('/', (req, res) => {
   })
 })
 
-router.post('/new', (req,res) => {
-    const entry = {
-        ...req.body,
-        id: Number(req.body.id),
-    }
-    db.saveEntry(entry)
-    res.sendStatus(204)
+router.post('/', (req,res) => {
+    console.log(req.body)
+    db.saveEntry(req.body)
+    .then(res.sendStatus(200))
+     db.saveEntry(req.body)
+    .then (res.sendStatus(204))
 })
 module.exports = router

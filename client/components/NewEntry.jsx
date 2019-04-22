@@ -1,15 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-// import {addEntry} from '../../server/db/db'
+import {postEntry} from '../api'
 class newEntry extends React.Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            id: 2,
-            mood: '',
-            external: '',
-            reflection: ''
+            "date": '',
+            "mood": '',
+            "external": '',
+            "reflection": ''
         }  
         this.setMood = this.setMood.bind(this)
         this.setFactor = this.setFactor.bind(this)
@@ -23,7 +23,7 @@ class newEntry extends React.Component {
         console.log(this.state)
     }
     setFactor(e) {
-        let text = e.target.innerHTML
+        let text = this.state.external + '  ' + e.target.innerHTML
         this.setState(state => ({
             external: text
         }))
@@ -31,10 +31,13 @@ class newEntry extends React.Component {
         console.log(this.state)
     }
     saveEntry(e) {
+        
         this.state.reflection = document.getElementById('journal').value
-        addEntry(this.state)
-
+        this.state.date = new Date()
         console.log(this.state)
+        var entry = this.state
+        postEntry(entry)
+        // postEntry(this.state)
         //set this data to something, send it to database
         //go back to homepage/ to view entries
     }

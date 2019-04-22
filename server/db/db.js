@@ -5,13 +5,19 @@ const connection = require('knex')(config)
 
 module.exports = {
     getEntries,
-    addEntry
+    saveEntry
 }
 
 function getEntries (db = connection) {
     return db('journalEntry').select()
 }
 
-function addEntry (db = connection) {
-    return db('journalEntry').insert()
+function saveEntry (entry, db = connection) {
+    return db('journalEntry')
+    .insert({
+        date: entry.date,
+        mood: entry.mood,
+        external: entry.external,
+        journal: entry.reflection
+    })
 }

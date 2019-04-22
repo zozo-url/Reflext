@@ -8,3 +8,15 @@ export function getJournalEntries (callback) {
         callback(err, res.body)
       })
   }
+
+export function postEntry (entry, callback) {
+    request.post(entryUrl)
+    .send(entry)
+    .end((err, res) => {
+        console.log(err);
+        console.log(res);
+    })
+}
+  //post + send to api
+  //router - entries
+  //db function

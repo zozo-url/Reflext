@@ -1,0 +1,10 @@
+body {
+    font-family: 'Helvetica', serif;
+}
+
+.entry {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 2px black solid;
+}
