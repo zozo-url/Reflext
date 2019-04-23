@@ -1,0 +1,11 @@
+{"moods": [
+    "excited", "empowered", "confident", "passionate",
+    "happy", "content", "focused", "grateful", "relaxed",
+    "calm", "ok", "tired", "uneasy", "nervous", "melancholic",
+    "irritated", "depressed", "overwhelmed", "anxious", "scared", "angry"
+],
+"extFactor": [
+       "good sleep", "bad sleep", "nutritious diet", "bad diet", "exercise", "sedentary",
+       "studies", "work", "hobbies", "being alone", "friends", "partner", "co-workers", "family",
+       "mediation", "yoga", "journal writing", "reading", "watching tv", "social media"]
+}

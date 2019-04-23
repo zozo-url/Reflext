@@ -35,8 +35,8 @@ return (
         <h1>MY ENTRIES</h1>
         {this.state.entries.map((entry, index) => 
         <div className= 'entry' key = {index}>
-        <h2>I'm feeling: {entry.mood}</h2>
         <p>{entry.date}</p>
+        <h2>I'm feeling: {entry.mood}</h2>
         <p>{entry.external}</p>
         <p key={index}>{entry.journal}</p>
         </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {postEntry} from '../api'
+import data from '../../data/data.json'
+
 class newEntry extends React.Component {
     constructor(props) {
         super(props)
@@ -37,37 +39,30 @@ class newEntry extends React.Component {
         console.log(this.state)
         var entry = this.state
         postEntry(entry)
+
         // postEntry(this.state)
         //set this data to something, send it to database
         //go back to homepage/ to view entries
     }
 render () {
-    let style = {
-        height: '10em',
-        width: '400px'
-    }
-    let moods = [
-        "excited", "empowered", "confident", "passionate",
-        "happy", "content", "focused", "grateful", "relaxed",
-        "calm", "ok", "tired", "uneasy", "nervous", "melancholic",
-        "irritated", "depressed", "overwhelmed", "anxious", "scared", "angry"
-    ]
-    let exFactor = [
-        "no sleep", "good sleep", "etc"
-    ]
   return (
     <div>
-        <h2>How are you?</h2>
-        {moods.map(mood => {
-            return <button key={mood} onClick={this.setMood}>{mood}</button>
+        <h1>How are you?</h1>
+            <div className = 'options'>
+            {data.moods.map(mood => {
+            return <p className='button' key={mood} onClick={this.setMood}>{mood}</p>
             })}
-        <h2>External factors</h2>
-        {exFactor.map(factor => {
-            return <button key={factor} onClick={this.setFactor}>{factor}</button>
+            </div>
+      <br/>
+         <h1>External factors</h1>
+           <div className = 'options'>
+           {data.extFactor.map(factor => {
+            return <p className='button' key={factor} onClick={this.setFactor}>{factor}</p>
             })}
-        <h2>Detail your experience</h2>
-        <input style={style} type='text' id='journal'/> <br/> <br/>
-        <button onClick={this.saveEntry}>submit</button>
+            </div>
+        <h1>Detail your experience</h1>
+        <div className = 'bottomOfForm'><textarea rows='10' cols='100' id='journal'/> <br/> <br/>
+        <Link to='/view'><h1 className='submit' onClick={this.saveEntry}>submit</h1></Link></div>
     </div>
 )  
 }
