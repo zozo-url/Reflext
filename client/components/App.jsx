@@ -1,8 +1,20 @@
 import React from 'react'
+import {HashRouter as Router, Route} from 'react-router-dom'
+import HomeButtons from './HomeButtons'
+import NewEntry from './NewEntry'
+import ViewEntries from './ViewEntries'
+import MyStats from './MyStats'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <Router>
+      <div>
+      <Route path = "/" component={HomeButtons}/>
+      <Route path = "/new" component={NewEntry}/>
+      <Route path = "/view" component={ViewEntries}/>
+      <Route path = "/stats" component={MyStats}/>
+    </div>
+    </Router>
   )
 }
 
