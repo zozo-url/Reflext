@@ -17,6 +17,7 @@ class newEntry extends React.Component {
         this.setFactor = this.setFactor.bind(this)
         this.saveEntry = this.saveEntry.bind(this)
         this.setTags = this.setTags.bind(this)
+        this.deleteTag = this.deleteTag.bind(this)
     }
     setMood(e) {
         let text = e.target.innerHTML
@@ -39,6 +40,14 @@ class newEntry extends React.Component {
             tags: newTagArray
         }))
         tagInput.value = "";
+    }
+    deleteTag(i){
+        let currentTag = document.getElementById(i).innerHTML;
+        console.log(currentTag)
+        this.setState({
+          tags: this.state.tags.filter(tag => (tag !== currentTag))
+        })
+        console.log(this.state.tags)
     }
     saveEntry(e) {
         this.state.reflection = document.getElementById("journal").value
@@ -73,9 +82,12 @@ render () {
         <br/>
         <h1>Add tags</h1>
         {this.state.tags.map((tag, i) => {
-            return <p key={i}>{tag}</p>
+            return <div className="tags">
+            <p className="tag" key={i} id={i}>{tag}</p>
+            <button className="tag-x" id={i} onClick={() => this.deleteTag(i)}>x</button>
+            </div>
         })}
-        <div className="tags">
+        <div className="tagInput">
             <input type="text" id="tag"></input> 
             <h3 className="submit" onClick={this.setTags}>add</h3>
             <br/>

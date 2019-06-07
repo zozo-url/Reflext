@@ -20,7 +20,6 @@ renderEntries(err, entries) {
         error:err,
         entries: entries || []
     })
-    console.log(entries)
 }
 refreshList(err){
     this.setState({
@@ -34,12 +33,13 @@ return (
     <div>
         <h1>MY ENTRIES</h1>
         {this.state.entries.map((entry, index) => 
-        <div className= 'entry' key = {index}>
-        <p>{entry.date}</p>
-        <h2>I'm feeling: {entry.mood}</h2>
-        <p>{entry.external}</p>
-        <p key={index}>{entry.journal}</p>
-        </div>
+            <div className= 'entry' key = {index}>
+                <p>{entry.date}</p>
+                <h2>I'm feeling: {entry.mood}</h2>
+                <p>{entry.external}</p>
+                <p>{entry.tags}</p>
+                <p key={index}>{entry.journal}</p>
+            </div>
         )}
     </div>
 )

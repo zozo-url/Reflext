@@ -62,3 +62,23 @@ h1 {
 .bottomOfForm {
     text-align: center;
 }
+
+.tags {
+    display: inline-block;
+}
+
+.tag {
+    display: inline-block;
+    margin: 12px;
+    padding: 20px 25px 20px 25px;
+    border: 1px solid #B6BFF8;
+    border-radius: 40px;
+}
+
+.tag-x {
+    display: inline-block;
+    margin: 2px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #B6BFF8;
+    border-radius: 40px;
+}
