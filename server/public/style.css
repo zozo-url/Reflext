@@ -63,6 +63,18 @@ h1 {
     text-align: center;
 }
 
+.journalTextArea {
+    background-color: transparent;
+    border-radius: 40px;
+    border: 1px solid #B6BFF8;
+    font-size: 20px;
+    color: black;
+    padding: 40px;
+}
+.journalTextArea:focus {
+    outline:0;
+}
+
 .tags {
     display: inline-block;
 }
@@ -98,5 +110,5 @@ h1 {
     padding: 20px 25px 20px 25px;
     border: 1px solid #B6BFF8;
     border-radius: 40px;
-    color: white;
+    color: black;
 }

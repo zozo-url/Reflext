@@ -55,6 +55,7 @@ class newEntry extends React.Component {
     saveEntry(e) {
         this.state.reflection = document.getElementById("journal").value
         let tagString = this.state.tags.toString()
+        console.log(tagString)
         this.setState(state => ({
             tags: tagString
         }))
@@ -81,7 +82,8 @@ render () {
         </div>
         <br/>
         <h1>Detail your experience</h1>
-        <div className="bottomOfForm"><textarea rows="10" cols="100" id="journal"/>
+        <div className="bottomOfForm">
+            <textarea className="journalTextArea" rows="10" cols="100" id="journal"/>
         <br/>
         <h1>Add tags</h1>
         {this.state.tags.map((tag, i) => {
@@ -91,12 +93,14 @@ render () {
             </div>
         })}
         <div className="tagInput">
-            <input type="text" id="tag"></input> 
+            <input className="journalTextArea" type="text" id="tag"></input> 
             <p className="addButton" onClick={this.setTags}>add</p>
             <br/>
         </div>
         <br/>
-        <Link to="/view"><h1 className="submitButton" onClick={this.saveEntry}>submit</h1></Link>
+        {/* <Link to="/view"> */}
+            <h1 className="submitButton" onClick={this.saveEntry}>submit</h1>
+            {/* </Link> */}
         </div>
     </div>
 )}
