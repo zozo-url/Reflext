@@ -9,7 +9,9 @@ exports.seed = function(knex, Promise) {
           date: 'date',
           mood: 'happy',
           external: 'good sleep',
-          journal: 'this is a test entry'}
+          journal: 'this is a test entry',
+          tags: 'cool, awesome'
+        }
       ]);
     });
 };
