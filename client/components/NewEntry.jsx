@@ -35,19 +35,22 @@ class newEntry extends React.Component {
         let tagInput = document.getElementById("tag");
         let newTag = tagInput.value;
         let newTagArray = this.state.tags
-        newTagArray.push(newTag)
-        this.setState(state => ({
-            tags: newTagArray
-        }))
-        tagInput.value = "";
+        if (newTag==""){
+            return
+        }
+        else {
+            newTagArray.push(newTag)
+            this.setState(state => ({
+                tags: newTagArray
+            }))
+            tagInput.value = ""; 
+        }
+        
     }
-    deleteTag(i){
-        let currentTag = document.getElementById(i).innerHTML;
-        console.log(currentTag)
+    deleteTag(displayedTagIndex){
         this.setState({
-          tags: this.state.tags.filter(tag => (tag !== currentTag))
+          tags: this.state.tags.filter((tag, arrayTagIndex) => arrayTagIndex !== displayedTagIndex)
         })
-        console.log(this.state.tags)
     }
     saveEntry(e) {
         this.state.reflection = document.getElementById("journal").value
@@ -89,11 +92,11 @@ render () {
         })}
         <div className="tagInput">
             <input type="text" id="tag"></input> 
-            <h3 className="submit" onClick={this.setTags}>add</h3>
+            <p className="addButton" onClick={this.setTags}>add</p>
             <br/>
         </div>
         <br/>
-        <Link to="/view"><h1 className="submit" onClick={this.saveEntry}>submit</h1></Link>
+        <Link to="/view"><h1 className="submitButton" onClick={this.saveEntry}>submit</h1></Link>
         </div>
     </div>
 )}
