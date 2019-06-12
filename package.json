@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate-react-webpack",
+  "name": "Reflex",
   "version": "0.2.2",
-  "description": "A webpack React starter",
-  "repository": "https://github.com/dev-academy-challenges/boilerplate-react-webpack.git",
+  "description": "A web application for journal reflection",
+  "repository": "https://github.com/zozo-url/reflex.git",
   "main": "server/index.js",
   "author": "EDA",
   "license": "ISC",

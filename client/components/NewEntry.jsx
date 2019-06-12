@@ -98,9 +98,9 @@ render () {
             <br/>
         </div>
         <br/>
-        {/* <Link to="/view"> */}
+        <Link to="/view">
             <h1 className="submitButton" onClick={this.saveEntry}>submit</h1>
-            {/* </Link> */}
+            </Link>
         </div>
     </div>
 )}
