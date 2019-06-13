@@ -8,15 +8,27 @@ body {
 
 .nav {
     margin:20px;
+    text-align: center;
+    background-color: white;
+    width: 50%;
+    margin-left: 25%;
 }
+
+/* a:visited { color: #000000; text-decoration: none}
+a:hover { color: #3366CC; text-decoration: underline}
+a:active { color: #000000; text-decoration: none} */
 
 .navButton {
     display: inline-block;
     font-weight:lighter;
     text-decoration: none;
-    padding: 10px;
+    color: black;
+    padding: 0px 10px 0px 10px;
     margin-left: 30px;
     margin-right: 30px;
+}
+.navButton:visited {
+    text-decoration: none;
 }
 
 h1 {

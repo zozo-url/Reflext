@@ -10,6 +10,8 @@ const App = () => {
     <Router>
       <div>
       <Route path = "/" component={HomeButtons}/>
+      <br/>
+      <br/>
       <Route path = "/new" component={NewEntry}/>
       <Route path = "/view" component={ViewEntries}/>
       <Route path = "/stats" component={MyStats}/>

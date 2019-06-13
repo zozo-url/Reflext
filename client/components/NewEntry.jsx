@@ -54,6 +54,10 @@ class newEntry extends React.Component {
     }
     saveEntry(e) {
         this.state.reflection = document.getElementById("journal").value
+        if (this.state.mood === ""){
+            return
+        }
+
         let tagString = this.state.tags.toString()
         console.log(tagString)
         this.setState(state => ({
