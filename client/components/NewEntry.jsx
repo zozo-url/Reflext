@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {postEntry} from '../api'
 import data from '../../data/data.json'
+import { thisTypeAnnotation } from '@babel/types';
 
 class newEntry extends React.Component {
     constructor(props) {
@@ -26,11 +27,19 @@ class newEntry extends React.Component {
         }))
     }
     setFactor(e) {
-        let text = this.state.external + ", " + e.target.innerHTML
+        var text;
+        if (this.state.external === "") {
+            text = e.target.innerHTML
+        }
+        else {
+            text = this.state.external + "+" + e.target.innerHTML
+        }
         this.setState(state => ({
             external: text
         }))
+        console.log(this.state.external)
     }
+
     setTags(e) {
         let tagInput = document.getElementById("tag");
         let newTag = tagInput.value;
@@ -54,10 +63,9 @@ class newEntry extends React.Component {
     }
     saveEntry(e) {
         this.state.reflection = document.getElementById("journal").value
-        if (this.state.mood === ""){
+        if (this.state.reflection === ""){
             return
         }
-
         let tagString = this.state.tags.toString()
         console.log(tagString)
         this.setState(state => ({
@@ -102,7 +110,7 @@ render () {
             <br/>
         </div>
         <br/>
-        <Link to="/view">
+            <Link to="/view">
             <h1 className="submitButton" onClick={this.saveEntry}>submit</h1>
             </Link>
         </div>
