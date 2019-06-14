@@ -14,10 +14,6 @@ body {
     margin-left: 25%;
 }
 
-/* a:visited { color: #000000; text-decoration: none}
-a:hover { color: #3366CC; text-decoration: underline}
-a:active { color: #000000; text-decoration: none} */
-
 .navButton {
     display: inline-block;
     font-weight:lighter;
@@ -45,7 +41,7 @@ h1 {
     margin: 12px;
     padding: 30px 20px 30px 20px;
     border: 1px solid #B6BFF8;
-    transition: all .8s ease-in;
+    transition: all .5s ease-in;
     border-radius: 40px;
 }
 .button:hover {
@@ -57,11 +53,12 @@ h1 {
 
 /* entries page */
 .entries {
+    display: block;
     text-align: center;
+
 }
 .entry {
-    display: inline-block;
-    margin: 20px;
+    margin: 2% 10% 2% 10%;
     padding: 15px;
     border: 1px white solid;
     border-radius: 20px;
@@ -97,26 +94,6 @@ h1 {
 }
 .journalTextArea:focus {
     outline:0;
-}
-
-.tags {
-    display: inline-block;
-}
-
-.tag {
-    display: inline-block;
-    margin: 12px;
-    padding: 20px 25px 20px 25px;
-    border: 1px solid #B6BFF8;
-    border-radius: 40px;
-}
-
-.tag-x {
-    display: inline-block;
-    margin: 2px;
-    padding: 5px 10px 5px 10px;
-    border: 1px solid #B6BFF8;
-    border-radius: 40px;
 }
 
 .addButton {

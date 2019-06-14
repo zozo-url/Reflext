@@ -6,7 +6,6 @@ return knex.schema.createTable('journalEntry', (table) => {
     table.string('mood')
     table.string('external')
     table.string('journal')
-    table.string('tags')
     })
 };
 

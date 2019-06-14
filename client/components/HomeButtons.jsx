@@ -6,7 +6,6 @@ return (
     <div className ="nav">
         <p className='navButton' key='start'><Link to='/new' className='navButton'>new entry</Link></p>
         <p className='navButton' key='viewlogs'><Link to='/view' className='navButton'>view entries</Link></p>
-        <p className='navButton' key='my stats'><Link to='/stats' className='navButton'>my stats</Link></p>
     </div>
 )
 }

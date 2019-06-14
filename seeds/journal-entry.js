@@ -6,11 +6,10 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('journalEntry').insert([
         {id: 1,
-          date: 'date',
+          date: '14/6/2019',
           mood: 'happy',
           external: 'good sleep',
-          journal: 'this is a test entry',
-          tags: 'cool, awesome'
+          journal: 'this is a test entry'
         }
       ]);
     });

@@ -22,22 +22,21 @@ refreshList(err){
     getJournalEntries(this.renderEntries)
 }
 renderEntries(err, entries) {
-    var fixedEntries = entries.map(thing => {
-        var newThing = thing.external.split("+");
-        thing.external = newThing;
-        return thing;
+    var fixedEntries = entries.map(entry => {
+        entry.external = entry.external.split("+");
+        return entry;
     })
     this.setState({
         error:err,
         entries: fixedEntries || []
     })
-    console.log(this.state.entries);
+    console.log(this.state.entries)
 }
 
 render(){
 return (
     <div>
-        <h1>MY ENTRIES</h1>
+        <h1>My Entries</h1>
         <div className="entries">
             {this.state.entries.map((entry, index) => 
             <div className= 'entry' key = {index}>
