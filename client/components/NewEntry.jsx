@@ -50,10 +50,15 @@ class newEntry extends React.Component {
         this.state.date = date;
     }
     saveEntry(e) {
-        this.state.reflection = document.getElementById("reflection").value
-        this.setDate();
-        var entry = this.state;
-        postEntry(entry); 
+        this.state.reflection = document.getElementById("reflection").value;
+        if (this.state.reflection === "") {
+            return
+        }
+        else {
+            this.setDate;
+            var entry = this.state;
+            postEntry(entry);
+        }   
     }
 
 render () {
