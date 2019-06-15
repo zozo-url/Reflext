@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const entryUrl = 'http://localhost:3000/v1/entries'
+const entryUrl = 'http://reflext.herokuapp.com/v1/entries'
 
 export function getJournalEntries (callback) {
     request.get(entryUrl)
