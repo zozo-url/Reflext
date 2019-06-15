@@ -4,11 +4,10 @@ body {
     background: linear-gradient(to right, #A7BFE8, #6190E8); 
     font-family: 'Helvetica', serif;
     font-weight: lighter;
+    text-align: center;
 }
-
 .nav {
     margin:20px;
-    text-align: center;
     background-color: white;
     width: 50%;
     margin-left: 25%;
@@ -26,13 +25,7 @@ body {
 .navButton:visited {
     text-decoration: none;
 }
-
-h1 {
-    text-align: center;
-    font-weight: lighter;
-}
 .options {
-    text-align: center;
     margin-left: 15%;
     margin-right: 15%;
 }
@@ -54,8 +47,6 @@ h1 {
 /* entries page */
 .entries {
     display: block;
-    text-align: center;
-
 }
 .entry {
     margin: 2% 10% 2% 10%;
@@ -74,14 +65,9 @@ h1 {
 
 .submit {
     display: inline-block;
-    text-align: center;
     margin: 20px;
     padding: 10px;
     border: 1px white solid;
-}
-
-.bottomOfForm {
-    text-align: center;
 }
 
 .journalTextArea {
@@ -96,20 +82,13 @@ h1 {
     outline:0;
 }
 
-.addButton {
+.buttonStyle {
     display: inline-block;
     margin: 12px;
     padding: 20px 25px 20px 25px;
-    background-color: white;
     color: black;
     border-radius: 40px;
 }
-
 .submitButton {
-    display: inline-block;
-    margin: 12px;
-    padding: 20px 25px 20px 25px;
     border: 1px solid #B6BFF8;
-    border-radius: 40px;
-    color: black;
 }

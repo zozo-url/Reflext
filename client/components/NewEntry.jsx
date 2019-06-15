@@ -43,15 +43,22 @@ class newEntry extends React.Component {
             external: text
         }))
     }
-    saveEntry(e) {
-        this.state.reflection = document.getElementById("reflection").value
+    setDate() {
         var d = new Date();
         var dMonth = d.getMonth() + 1;
         var date = d.getDate().toString() + "/" + dMonth.toString() + "/" + d.getFullYear().toString();
         this.state.date = date;
-        var entry = this.state;
-        console.log(this.state);
-        postEntry(entry)
+    }
+    saveEntry(e) {
+        this.state.reflection = document.getElementById("reflection").value
+        if (this.state.reflection === "") {
+            return
+        }
+        else {
+            this.setDate();
+            var entry = this.state;
+            postEntry(entry) 
+        }   
     }
 
 render () {
@@ -76,7 +83,7 @@ render () {
             <textarea className="journalTextArea" rows="10" cols="100" id="reflection"/>
         <br/>
             <Link to="/view">
-            <h1 className="submitButton" onClick={this.saveEntry}>submit</h1>
+            <h1 className="buttonStyle submitButton" onClick={this.saveEntry}>submit</h1>
             </Link>
         </div>
     </div>

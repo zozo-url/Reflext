@@ -32,13 +32,12 @@ renderEntries(err, entries) {
     })
     console.log(this.state.entries)
 }
-
 render(){
 return (
     <div>
         <h1>My Entries</h1>
         <div className="entries">
-            {this.state.entries.map((entry, index) => 
+            {this.state.entries.reverse().map((entry, index) => 
             <div className= 'entry' key = {index}>
                 <p>{entry.date}</p>
                 <h2>I'm feeling: {entry.mood}</h2>
@@ -51,8 +50,6 @@ return (
             )}
         </div>
     </div>
-)
-}
-}
+)}}
 
 export default viewEntries
