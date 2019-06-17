@@ -1,3 +1,8 @@
-# REFLEX
+# REFLEXT
+http://reflext.herokuapp.com
 
-An online journal, where entries include a users current mood and external factors related to it. This allows the user examine relationships between their emotions and lifestyle choices, as well as keep track of their thoughts during these moments. 
+This is a communal application that allows users to anonymously write journal entries.
+The purpose is to empathise with and contribute to a larger network of people and their emotional experiences.
+Click the 'new entry' button to start contributing.
+You also have the power to delete any entries from the communal pool.
+Use this resource considerately.
