@@ -51,7 +51,7 @@ deleteEntry (id) {
 render(){
 return (
     <div>
-        <h1>My Entries</h1>
+        <h1>Entries</h1>
         <div className="entries">
             {!this.state.entries[0] ? 
             <p>There are currently no entries.</p> :

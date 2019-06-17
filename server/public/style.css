@@ -105,3 +105,12 @@ body {
 .deleteButton:focus {
     outline:0;
 }
+.home {
+    margin: 10%;
+}
+
+.homeDescription {
+    font-size: 1.5em;
+    /* width: 70%; */
+    /* margin-left: 15%; */
+}
