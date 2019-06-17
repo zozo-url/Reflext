@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {postEntry} from '../api'
 import data from '../../data/data.json'
+import moment from 'moment'
 
 class newEntry extends React.Component {
     constructor(props) {
@@ -43,19 +44,13 @@ class newEntry extends React.Component {
             external: text
         }))
     }
-    setDate() {
-        var d = new Date();
-        var dMonth = d.getMonth() + 1;
-        var date = d.getDate().toString() + "/" + dMonth.toString() + "/" + d.getFullYear().toString();
-        this.state.date = date;
-    }
     saveEntry(e) {
         this.state.reflection = document.getElementById("reflection").value;
         if (this.state.reflection === "") {
             return
         }
         else {
-            this.setDate();
+            this.state.date = moment().format('DD/MM/YY')
             var entry = this.state;
             postEntry(entry);
         }   
