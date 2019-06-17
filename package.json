@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate-react-webpack",
+  "name": "Reflex",
   "version": "0.2.2",
-  "description": "A webpack React starter",
-  "repository": "https://github.com/dev-academy-challenges/boilerplate-react-webpack.git",
+  "description": "A web application for journal reflection",
+  "repository": "https://github.com/zozo-url/reflex.git",
   "main": "server/index.js",
   "author": "EDA",
   "license": "ISC",
@@ -30,10 +30,9 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "pg": "^7.11.0",
     "sqlite3": "^4.0.6",
-    "superagent": "^5.0.2"
-  },
-  "devDependencies": {
+    "superagent": "^5.0.2",
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
@@ -46,12 +45,13 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "jest": "^24.7.1",
-    "knex": "^0.16.5",
+    "knex": "^0.17.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
-  }
+  },
+  "devDependencies": {}
 }
