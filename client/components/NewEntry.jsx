@@ -55,7 +55,7 @@ class newEntry extends React.Component {
             return
         }
         else {
-            this.setDate;
+            this.setDate();
             var entry = this.state;
             postEntry(entry);
         }   

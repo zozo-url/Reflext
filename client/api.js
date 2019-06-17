@@ -1,6 +1,7 @@
 import request from 'superagent'
 
-const entryUrl = 'http://reflext.herokuapp.com/v1/entries'
+// const entryUrl = 'http://reflext.herokuapp.com/v1/entries'
+const entryUrl = 'http://localhost:3000/v1/entries' 
 
 export function getJournalEntries (callback) {
     request.get(entryUrl)
@@ -16,7 +17,11 @@ export function postEntry (entry, callback) {
         console.log(err);
         console.log(res);
     })
+  }
+export function deleteEntryById (id, callback) {
+  request.get(entryUrl + '/' + id)
+    .send(id)
+    .end((err, res) => {
+      callback(err, res.body)
+    })
 }
-  //post + send to api
-  //router - entries
-  //db function

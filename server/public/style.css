@@ -92,3 +92,16 @@ body {
 .submitButton {
     border: 1px solid #B6BFF8;
 }
+
+.deleteButton {
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 35px;
+    margin-left: 50%;
+    padding: 0px 14px 6px 14px;
+    transition: all .50s ease-in;
+}
+.deleteButton:focus {
+    outline:0;
+}

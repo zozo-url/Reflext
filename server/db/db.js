@@ -5,7 +5,8 @@ const connection = require('knex')(config)
 
 module.exports = {
     getEntries,
-    saveEntry
+    saveEntry,
+    deleteEntry
 }
 
 function getEntries (db = connection) {
@@ -20,4 +21,10 @@ function saveEntry (entry, db = connection) {
         external: entry.external,
         journal: entry.reflection
     })
+}
+
+function deleteEntry (id, db = connection){
+    return db('journalEntry')
+    .where('id', id)
+    .del()
 }

@@ -20,4 +20,14 @@ router.post('/', (req,res) => {
      db.saveEntry(req.body)
     .then (res.sendStatus(204))
 })
+
+router.get('/:id', (req,res) => {
+    db.deleteEntry(req.params.id)
+    .then(entry => {
+        res.json(entry)
+    })
+    .catch(err => {
+        res.status(500).send(err.message)
+    })
+})
 module.exports = router
