@@ -23,7 +23,7 @@ refreshList(err){
     getJournalEntries(this.renderEntries)
 }
 renderEntries(err, entries) {
-    var fixedEntries = entries.map(entry => {
+    var fixedEntries = entries.reverse().map(entry => {
         entry.external = entry.external.split("+");
         return entry;
     })
@@ -56,7 +56,7 @@ return (
             {!this.state.entries[0] ? 
             <p>There are currently no entries.</p> :
             <div>
-            {this.state.entries.reverse().map((entry, index) => 
+            {this.state.entries.map((entry, index) => 
             <div className= 'entry' key = {index}>
                 <p>{entry.date}<button className="deleteButton" onClick={() => this.deleteEntry(entry.id)}>x</button></p>
                 <h2>I'm feeling: {entry.mood}</h2>
